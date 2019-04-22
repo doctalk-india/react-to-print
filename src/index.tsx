@@ -190,10 +190,14 @@ export default class ReactToPrint extends React.Component<IReactToPrintProps> {
     render() {
         const {
             trigger,
+            onBeforePrint,
         } = this.props;
 
         return React.cloneElement(trigger(), {
             onClick: () => {
+                if (onBeforePrint) {
+                    onBeforePrint()
+                }
                 setTimeout(this.handlePrint, this.props.delay || 0)
             },
             ref: this.setRef,
