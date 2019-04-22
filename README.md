@@ -4,20 +4,20 @@
 
 # ReactToPrint - Print React components in the browser
 
-[![Build Status](https://travis-ci.org/gregnb/react-to-print.svg?branch=master)](https://travis-ci.org/gregnb/react-to-print)
-[![NPM Downloads](https://img.shields.io/npm/dt/react-to-print.svg?style=flat)](https://npmcharts.com/compare/react-to-print?minimal=true)
-[![dependencies Status](https://david-dm.org/gregnb/react-to-print/status.svg)](https://david-dm.org/gregnb/react-to-print)
-[![npm version](https://badge.fury.io/js/react-to-print.svg)](https://badge.fury.io/js/react-to-print)
+[![Build Status](https://travis-ci.org/gregnb/react-to-print-advanced.svg?branch=master)](https://travis-ci.org/gregnb/react-to-print-advanced)
+[![NPM Downloads](https://img.shields.io/npm/dt/react-to-print-advanced.svg?style=flat)](https://npmcharts.com/compare/react-to-print-advanced?minimal=true)
+[![dependencies Status](https://david-dm.org/gregnb/react-to-print-advanced/status.svg)](https://david-dm.org/gregnb/react-to-print-advanced)
+[![npm version](https://badge.fury.io/js/react-to-print-advanced.svg)](https://badge.fury.io/js/react-to-print-advanced)
 
 So you've created a React component but would love to give end users the ability to print out the contents of that component. This package aims to solve that by popping up a new print window with CSS styles copied over as well.
 
 ## Install
 
-`npm install react-to-print --save-dev`
+`npm install react-to-print-advanced --save-dev`
 
 ## Demo
 
-[![Edit react-to-print](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/kmmw7l39y7)
+[![Edit react-to-print-advanced](https://codesandbox.io/static/img/play-codesandbox.svg)](https://codesandbox.io/s/kmmw7l39y7)
 
 ## Example
 
@@ -25,7 +25,7 @@ So you've created a React component but would love to give end users the ability
 
 ```js
 import React from 'react';
-import ReactToPrint from 'react-to-print';
+import ReactToPrint from 'react-to-print-advanced';
 
 class ComponentToPrint extends React.Component {
   render() {
@@ -77,7 +77,7 @@ class Example extends React.Component {
 
 ```js
 import React, { useRef } from 'react';
-import ReactToPrint from 'react-to-print';
+import ReactToPrint from 'react-to-print-advanced';
 
 class ComponentToPrint extends React.Component {
   render() {
@@ -140,8 +140,8 @@ The component accepts the following props:
 | **`closeAfterPrint`** | boolean  | Close the print window after action                                                                                                 |
 |    **`pageStyle`**    | string   | Override default print window styling                                                                                               |
 |    **`bodyClass`**    | string   | Optional class to pass to the print window body                                                                                     |
-
+|    **`delay`**    | string   | Optional delay to pass                                                                                     |
 ## FAQ
 
-**Why does `react-to-print` skip `<link rel="stylesheet" href="">` tags?**
+**Why does `react-to-print-advanced` skip `<link rel="stylesheet" href="">` tags?**
 `<link>`s with empty `href` attributes are [INVALID HTML](https://www.w3.org/TR/html50/document-metadata.html#attr-link-href). In addition, they can cause all sorts of [undesirable behavior](https://gtmetrix.com/avoid-empty-src-or-href.html). For example, many browsers - including modern ones, when presented with `<link href="">` will attempt to load the current page. Some even attempt to load the current page's parent directory.
