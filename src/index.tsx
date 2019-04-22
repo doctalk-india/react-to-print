@@ -11,6 +11,8 @@ export interface IReactToPrintProps {
     trigger: <T>() => React.ReactElement<ITriggerProps<T>>;
     /** Content to be printed */
     content: () => React.ReactInstance;
+    /**Add a delay in milliseconds*/
+    delay?: number;
     /** Copy styles over into print window. default: true */
     copyStyles?: boolean;
     /** Callback function to trigger before print */
@@ -191,7 +193,9 @@ export default class ReactToPrint extends React.Component<IReactToPrintProps> {
         } = this.props;
 
         return React.cloneElement(trigger(), {
-            onClick: this.handlePrint,
+            onClick: () => {
+                setTimeout(this.handlePrint, this.props.delay || 0)
+            },
             ref: this.setRef,
         });
     }
