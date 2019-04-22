@@ -1,5 +1,5 @@
 {
-  "name": "react-to-print",
+  "name": "react-to-print-advanced",
   "version": "2.1.1",
   "description": "Print React components in the browser",
   "main": "lib/index.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gregnb/react-to-print.git"
+    "url": "git+https://github.com/doctalk-india/react-to-print.git"
   },
   "keywords": [
     "react",
@@ -23,12 +23,12 @@
     "reactjs",
     "react-to-print"
   ],
-  "author": "gregnb <gregnb@gmail.com>",
+  "author": "sauravexodus <sourav@getpulse.care>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gregnb/react-to-print/issues"
+    "url": "https://github.com/doctalk-india/react-to-print/issues"
   },
-  "homepage": "https://github.com/gregnb/react-to-print#readme",
+  "homepage": "https://github.com/doctalk-india/react-to-print#readme",
   "peerDependencies": {
     "react": "^15.0.0 || ^16.0.0",
     "react-dom": "^15.0.0 || ^16.0.0"
